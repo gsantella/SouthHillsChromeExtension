@@ -1,0 +1,2 @@
+Make a table that displays class times
+Highlight the current class/ period
