@@ -1,2 +1,0 @@
-Working on weather app for chrome extension.
-Needs to have weather icon
