@@ -1,0 +1,3 @@
+Working on weather app for chrome extension.
+Needs to have weather icon
+   You can get this from Guido if needed.
