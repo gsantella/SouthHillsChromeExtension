@@ -1,1 +1,3 @@
 Working on announcements
+
+Announcements Endpoint: http://thadpi.dynu.net:8000/
