@@ -2,3 +2,18 @@ Working on weather app for chrome extension.
 Needs to have weather icon
    You can get this from Guido if needed.
    https://openweathermap.org/weather-conditions
+
+   <ul class="statistics">
+     <li class="style1">
+       <span class="icon fa-code-fork">icon img here</span>
+       <strong>79 &deg;</strong> State College
+     </li>
+     <li class="style4">
+       <span class="icon fa-laptop">icon img here</span>
+       <strong>80 &deg;</strong> Altoona
+     </li>
+     <li class="style5">
+       <span class="icon fa-diamond">icon here</span>
+       <strong>82 &deg;</strong> Lewistown
+     </li>
+   </ul>
