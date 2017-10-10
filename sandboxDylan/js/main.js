@@ -36,19 +36,19 @@ var timer = setInterval(function() {
     ch.style.backgroundColor = 'lightyellow';
   } else if ((currentHour == 12) && (currentMin >= 50)){
     per5.style.backgroundColor = 'lightyellow';
-  } else if ((currentHour == 1) && (currentMin < 50)){
+  } else if ((currentHour == 13) && (currentMin < 50)){
     per5.style.backgroundColor = 'lightyellow';
-  } else if ((currentHour == 1) && (currentMin >= 50)){
+  } else if ((currentHour == 13) && (currentMin >= 50)){
     per6.style.backgroundColor = 'lightyellow';
-  } else if ((currentHour == 2) && (currentMin < 50)){
+  } else if ((currentHour == 14) && (currentMin < 50)){
     per6.style.backgroundColor = 'lightyellow';
-  } else if ((currentHour == 2) && (currentMin >= 50)){
+  } else if ((currentHour == 14) && (currentMin >= 50)){
     per7.style.backgroundColor = 'lightyellow';
-  } else if ((currentHour == 3) && (currentMin < 50)){
+  } else if ((currentHour == 15) && (currentMin < 50)){
     per7.style.backgroundColor = 'lightyellow';
-  } else if ((currentHour == 3) && (currentMin >= 50)){
+  } else if ((currentHour == 15) && (currentMin >= 50)){
     per8.style.backgroundColor = 'lightyellow';
-  } else if ((currentHour == 4) && (currentMin < 50)){
+  } else if ((currentHour == 15) && (currentMin < 50)){
     per9.style.backgroundColor = 'lightyellow';
   }
 
