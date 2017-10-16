@@ -55,3 +55,11 @@ function highlightCurrentPeriod() {
 
 highlightCurrentPeriod();
 // Ending Dylan's JS ////////////////////////////////////////
+
+// Dynamic Day Script ///////////////////////////////////////
+var day = document.getElementById('happyDay');
+var currentDay = new Date().getDay();
+var weekDays = ['Happy Sunday!', 'Happy Monday!', 'Happy Tuesday!',
+                'Happy Wednesday!', 'Happy Thursday', 'Happy Friday', 'Happy Saturday!'];
+day.innerHTML = weekDays[currentDay];
+// Ending Dynamic Day Script ////////////////////////////////
