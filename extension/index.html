@@ -22,7 +22,7 @@
 				<!-- Header -->
 					<header id="header" class="alt">
 						<span class="logo"><img src="images/logo.svg" alt="" /></span>
-						<h1>Happy Monday!</h1>
+						<h1 id="happyDay"></h1>
 						<p>Just another free, fully responsive site template<br />
 						built by <a href="https://github.com/gsantella/SouthHillsChromeExtension/graphs/contributors">Javascripters</a> for <a href="http://www.southhills.edu">South Hills</a>.</p>
 					</header>
@@ -67,43 +67,63 @@
 								</header>
 
 								<div class="table-wrapper">
-									<table class="alt">
-										<thead>
-											<tr>
-												<th>Period</th>
-												<th>Start Time</th>
-												<th>End Time</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>Item One</td>
-												<td>Ante turpis integer aliquet porttitor.</td>
-												<td>29.99</td>
-											</tr>
-											<tr>
-												<td>Item Two</td>
-												<td>Vis ac commodo adipiscing arcu aliquet.</td>
-												<td>19.99</td>
-											</tr>
-											<tr>
-												<td>Item Three</td>
-												<td> Morbi faucibus arcu accumsan lorem.</td>
-												<td>29.99</td>
-											</tr>
-											<tr>
-												<td>Item Four</td>
-												<td>Vitae integer tempus condimentum.</td>
-												<td>19.99</td>
-											</tr>
-											<tr>
-												<td>Item Five</td>
-												<td>Ante turpis integer aliquet porttitor.</td>
-												<td>29.99</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
+							    <table class="alt">
+							      <thead>
+							        <tr>
+							          <th>Period</th>
+							          <th>Start Time</th>
+							          <th>End Time</th>
+							        </tr>
+							      </thead>
+							      <tbody>
+							        <tr id="period1">
+							          <td>1</td>
+							          <td>8:00 am</td>
+							          <td>8:50 am</td>
+							        </tr>
+							        <tr id="period2">
+							          <td>2</td>
+							          <td>9:00 am</td>
+							          <td>9:50 am</td>
+							        </tr>
+							        <tr id="period3">
+							          <td>3</td>
+							          <td>10:00 am</td>
+							          <td>10:50 am</td>
+							        </tr>
+							        <tr id="period4">
+							          <td>4</td>
+							          <td>11:00 am</td>
+							          <td>11:50 am</td>
+							        </tr>
+							        <tr id="commonHour">
+							          <td>Common Hour</td>
+							          <td>11:50 am</td>
+							          <td>1:00 pm</td>
+							        </tr>
+							        <tr id="period5">
+							          <td>5</td>
+							          <td>1:00 pm</td>
+							          <td>1:50 pm</td>
+							        </tr>
+							        <tr id="period6">
+							          <td>6</td>
+							          <td>2:00 pm</td>
+							          <td>2:50 pm</td>
+							        </tr>
+							        <tr id="period7">
+							          <td>7</td>
+							          <td>3:00 pm</td>
+							          <td>3:50 pm</td>
+							        </tr>
+							        <tr id="period8">
+							          <td>8</td>
+							          <td>4:00 pm</td>
+							          <td>4:50 pm</td>
+							        </tr>
+							      </tbody>
+							    </table>
+							  </div>
 
 							</section>
 
@@ -186,6 +206,7 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script src="js/main.js"></script>
 
 	</body>
 </html>
