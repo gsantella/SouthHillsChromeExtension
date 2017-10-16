@@ -8,8 +8,7 @@ var per6 = document.getElementById('period6');
 var per7 = document.getElementById('period7');
 var per8 = document.getElementById('period8');
 
-
-var timer = setInterval(function() {
+function highlightCurrentPeriod() {
 
   var currentTime = new Date();
 
@@ -51,5 +50,6 @@ var timer = setInterval(function() {
   } else if ((currentHour == 15) && (currentMin < 50)){
     per9.style.backgroundColor = 'lightyellow';
   }
+};
 
-}, 5000);
+highlightCurrentPeriod();
