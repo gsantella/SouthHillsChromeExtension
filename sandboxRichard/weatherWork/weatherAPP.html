@@ -3,24 +3,22 @@
 <head>
   <title>WeatherAPP</title>
   <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
-  <link href="css/main.css" rel="stylesheet"/>
 </head>
 <body>
-  <span class="temperature_section">
-		  <span id="weather_icon_altoona" class ="weather_picture"><img src="http://openweathermap.org/img/w/04d.png" /></span>
-      <span id="temperature_altoona" class ="temperature_amount">loading</span>
-      <span class="temperature_label">Altoona</span>
-  </span>
-  <span class="temperature_section">
-			<span id="weather_icon_altoona" class ="weather_picture">loading</span>
-      <span id="temperature_statecollege" class ="temperature_amount">loading</span>
-      <span class="temperature_label">State College</span>
-  </span>
-  <span class="temperature_section">
-		 	<span id="weather_icon_altoona" class ="weather_picture">loading</span>
-      <span id="temperature_lewistown" class ="temperature_amount">loading</span>
-      <span class="temperature_label">Lewistown</span>
-  </span>
+  <ul class="statistics">
+    <li class="style1">
+      <span class="icon fa-code-fork"><span><img id='weather_icon_statecollege' src=''></img></span></span>
+      <strong><span id="temperature_statecollege">loading</span>&deg;</strong> State College
+    </li>
+    <li class="style4">
+      <span class="icon fa-laptop"><span> <img id='weather_icon_altoona' src=''></img></span></span>
+      <strong><span id="temperature_altoona">loading</span>&deg;</strong> Altoona
+    </li>
+    <li class="style5">
+      <span class="icon fa-diamond"><span> <img id='weather_icon_lewistown' src=''></img></span></span>
+      <strong><span id="temperature_lewistown">loading</span>&deg;</strong> Lewistown
+    </li>
+  </ul>
   <script src="js/main.js"></script>
 </body>
 </html>
