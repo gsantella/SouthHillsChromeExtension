@@ -104,3 +104,12 @@ var lewistown_icon = document.getElementById('weather_icon_lewistown');
 
   request.send();
   // Ending Rich's Script ////////////////////////////////////////////////////////
+
+
+// Starting Jon's Script /////////////////////////////////////////////////////////
+$.getJSON('http://thadpi.dynu.net:8000/', function(data) {
+  $.each(data.announcements, function(index) {
+    $('#announcements').append(`<li><strong>${moment(data.announcements[index].ts , 'YYYYMMDD').fromNow()}</strong> ${data.announcements[index].msg}</li>`);
+  });
+});
+// Ending Jon's Script //////////////////////////////////////////////////////////
