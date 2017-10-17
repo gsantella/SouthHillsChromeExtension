@@ -63,3 +63,37 @@ var weekDays = ['Happy Sunday!', 'Happy Monday!', 'Happy Tuesday!',
                 'Happy Wednesday!', 'Happy Thursday', 'Happy Friday', 'Happy Saturday!'];
 day.innerHTML = weekDays[currentDay];
 // Ending Dynamic Day Script ////////////////////////////////
+
+
+// Starting Rich's Script ///////////////////////////////////
+var altoonaTempElement = document.getElementById('temperature_altoona');
+var stateCollegeTempElement = document.getElementById('temperature_statecollege');
+var lewistownTempElement = document.getElementById('temperature_lewistown');
+var altoona_icon = document.getElementById('weather_icon_altoona');
+var statecollege_icon = document.getElementById('weather_icon_statecollege');
+var lewistown_icon = document.getElementById('weather_icon_lewistown');
+
+
+  var request = new XMLHttpRequest();
+
+  request.open('GET', 'http://api.openweathermap.org/data/2.5/group?id=5178195,5213681,5197850&units=imperial&appid=fae79d6ccbaa879882d5706085ebe091', true)
+  request.onload = function() {
+    var dataFromAPI = JSON.parse(request.responseText);
+    //get the weather
+    altoonaTempElement.innerHTML = Math.round(dataFromAPI.list[0].main.temp);
+    stateCollegeTempElement.innerHTML = Math.round(dataFromAPI.list[1].main.temp);
+    lewistownTempElement.innerHTML = Math.round(dataFromAPI.list[2].main.temp);
+    //get the icon
+    altoona_icon.src = 'http://openweathermap.org/img/w/' + dataFromAPI.list[0].weather[0].icon + '.png';
+    statecollege_icon.src = 'http://openweathermap.org/img/w/' + dataFromAPI.list[1].weather[0].icon + '.png';
+    lewistown_icon.src = 'http://openweathermap.org/img/w/' + dataFromAPI.list[2].weather[0].icon + '.png';
+    console.log(dataFromAPI);
+  }
+
+  // Called when there was a connection error to the data API
+  request.onerror = function() {
+    console.log("Something went wrong!")
+  }
+
+  request.send();
+  // Ending Rich's Script ////////////////////////////////////////////////////////
