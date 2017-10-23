@@ -82,19 +82,26 @@ var lewistown_icon = document.getElementById('weather_icon_lewistown');
   request.open('GET', 'http://api.openweathermap.org/data/2.5/group?id=5178195,5213681,5197850&units=imperial&appid=fae79d6ccbaa879882d5706085ebe091', true)
   request.onload = function() {
     var dataFromAPI = JSON.parse(request.responseText);
-    //get the weather
-    altoonaTempElement.innerHTML = Math.round(dataFromAPI.list[0].main.temp);
-    stateCollegeTempElement.innerHTML = Math.round(dataFromAPI.list[1].main.temp);
-    lewistownTempElement.innerHTML = Math.round(dataFromAPI.list[2].main.temp);
-    //weather description
-    weather_statecollege.innerHTML = dataFromAPI.list[0].weather[0].description;
-    weather_altoona.innerHTML = dataFromAPI.list[1].weather[0].description;
-    weather_lewistown.innerHTML = dataFromAPI.list[2].weather[0].description;
-    //get the icon
-    altoona_icon.src = 'http://openweathermap.org/img/w/' + dataFromAPI.list[0].weather[0].icon + '.png';
-    statecollege_icon.src = 'http://openweathermap.org/img/w/' + dataFromAPI.list[1].weather[0].icon + '.png';
-    lewistown_icon.src = 'http://openweathermap.org/img/w/' + dataFromAPI.list[2].weather[0].icon + '.png';
-    console.log(dataFromAPI);
+
+    //if JSON data comes back without a 500 HTML Status Code
+    if (dataFromAPI.cod != '500') {
+      //get the weather
+      altoonaTempElement.innerHTML = Math.round(dataFromAPI.list[0].main.temp);
+      stateCollegeTempElement.innerHTML = Math.round(dataFromAPI.list[1].main.temp);
+      lewistownTempElement.innerHTML = Math.round(dataFromAPI.list[2].main.temp);
+      //weather description
+      weather_statecollege.innerHTML = dataFromAPI.list[0].weather[0].description;
+      weather_altoona.innerHTML = dataFromAPI.list[1].weather[0].description;
+      weather_lewistown.innerHTML = dataFromAPI.list[2].weather[0].description;
+      //get the icon
+      altoona_icon.src = 'http://openweathermap.org/img/w/' + dataFromAPI.list[0].weather[0].icon + '.png';
+      statecollege_icon.src = 'http://openweathermap.org/img/w/' + dataFromAPI.list[1].weather[0].icon + '.png';
+      lewistown_icon.src = 'http://openweathermap.org/img/w/' + dataFromAPI.list[2].weather[0].icon + '.png';
+      console.log(dataFromAPI);
+    } else {
+      console.log('The weather service is unavailable.');
+    }
+
   }
 
   // Called when there was a connection error to the data API
@@ -111,5 +118,7 @@ $.getJSON('http://thadpi.dynu.net:8000/', function(data) {
   $.each(data.announcements, function(index) {
     $('#announcements').append(`<li><strong>${moment(data.announcements[index].ts , 'YYYYMMDD').fromNow()}</strong> ${data.announcements[index].msg}</li>`);
   });
+}).fail(function() {
+    $('#announcements').append(`<li>Announcments currently not available.</li>`);
 });
 // Ending Jon's Script //////////////////////////////////////////////////////////
